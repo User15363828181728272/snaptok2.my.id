@@ -32,7 +32,7 @@ export function Header() {
         >
           <PlayCircle className="h-7 w-7 text-primary" />
           <span>
-            Snap<span className="text-muted-foreground">-Tok</span>
+            Snap<span className="text-muted-foreground">Tok</span>
           </span>
         </Link>
 
@@ -66,7 +66,7 @@ export function Header() {
               >
                 <PlayCircle className="h-7 w-7 text-primary" />
                 <span>
-                  Snap<span className="text-muted-foreground">-Tok</span>
+                  Snap<span className="text-muted-foreground">Tok</span>
                 </span>
               </Link>
 
