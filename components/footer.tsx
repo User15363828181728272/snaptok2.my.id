@@ -20,7 +20,7 @@ export function Footer() {
           >
             <PlayCircle className="h-7 w-7" />
             <span>
-              Ssstiktok<span className="opacity-70">-Soraa</span>
+              Snap<span className="opacity-70">Tok</span>
             </span>
           </Link>
 
