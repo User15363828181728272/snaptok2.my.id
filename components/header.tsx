@@ -11,6 +11,7 @@ import {
   HelpCircle,
   Shield,
   BookOpen,
+  FileText,
 } from "lucide-react";
 
 const navLinks = [
@@ -18,6 +19,7 @@ const navLinks = [
   { href: "/faq", label: "FAQ", icon: HelpCircle },
   { href: "/privacy", label: "Privasi", icon: Shield },
   { href: "/guide", label: "Panduan", icon: BookOpen },
+  { href: "/docs", label: "Docs API", icon: FileText },
 ];
 
 export function Header() {
@@ -32,9 +34,22 @@ export function Header() {
         >
           <PlayCircle className="h-7 w-7 text-primary" />
           <span>
-            Snap<span className="text-muted-foreground">Tok</span>
+            Snap<span className="text-muted-foreground">-Tok</span>
           </span>
         </Link>
+
+        {/* Platform switcher pill */}
+        <div className="hidden md:flex items-center gap-1 rounded-full border border-border bg-muted p-1 text-sm">
+          <span className="rounded-full px-4 py-1.5 font-medium bg-background text-foreground shadow-sm">
+            🎵 TikTok
+          </span>
+          <Link
+            href="/douyin"
+            className="rounded-full px-4 py-1.5 font-medium text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+          >
+            🎬 Douyin
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 md:flex">
@@ -66,9 +81,23 @@ export function Header() {
               >
                 <PlayCircle className="h-7 w-7 text-primary" />
                 <span>
-                  Snap<span className="text-muted-foreground">Tok</span>
+                  Snap<span className="text-muted-foreground">-Tok</span>
                 </span>
               </Link>
+
+              {/* Platform switcher mobile */}
+              <div className="flex items-center gap-1 rounded-full border border-border bg-muted p-1 text-sm w-fit">
+                <span className="rounded-full px-4 py-1.5 font-medium bg-background text-foreground shadow-sm">
+                  🎵 TikTok
+                </span>
+                <Link
+                  href="/douyin"
+                  className="rounded-full px-4 py-1.5 font-medium text-muted-foreground"
+                  onClick={() => setIsOpen(false)}
+                >
+                  🎬 Douyin
+                </Link>
+              </div>
 
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => {
