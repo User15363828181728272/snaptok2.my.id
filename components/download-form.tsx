@@ -389,6 +389,26 @@ export function DownloadForm() {
 ) : (
     // Video
     <div className="flex flex-col sm:flex-row gap-2">
+      {videoData.hdplay && (
+        <Button
+          onClick={() =>
+            downloadFile(
+              videoData.hdplay,
+              `tiktok_${videoData.id}_hd.mp4`,
+              "hd"
+            )
+          }
+          disabled={downloading === "hd"}
+          className="flex-1"
+        >
+          {downloading === "hd" ? (
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          ) : (
+            <Video className="mr-2 h-4 w-4" />
+          )}
+          HD Tanpa Watermark
+        </Button>
+      )}
       {videoData.play && (
         <Button
           variant="secondary"
@@ -407,7 +427,7 @@ export function DownloadForm() {
           ) : (
             <Video className="mr-2 h-4 w-4" />
           )}
-          HD Tanpa Watermark
+          SD Tanpa Watermark
         </Button>
       )}
     </div>
