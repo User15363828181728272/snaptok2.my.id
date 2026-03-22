@@ -6,6 +6,8 @@ const footerLinks = [
   { href: "/faq", label: "FAQ" },
   { href: "/privacy", label: "Kebijakan Privasi" },
   { href: "/guide", label: "Panduan" },
+  { href: "/docs", label: "Docs API" },
+  { href: "/douyin", label: "Douyin Downloader" },
 ];
 
 export function Footer() {
@@ -20,7 +22,7 @@ export function Footer() {
           >
             <PlayCircle className="h-7 w-7" />
             <span>
-              Snap<span className="opacity-70">Tok</span>
+              Snaptok<span className="opacity-70">-id</span>
             </span>
           </Link>
 
